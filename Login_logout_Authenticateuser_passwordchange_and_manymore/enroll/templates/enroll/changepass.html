@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change password</title>
+    
+</head>
+<body>
+    <h2>You are at changepassword Page</h2>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {% comment %} {{form.as_p}} {% endcomment %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+        {% endfor %}
+        <input type="submit" value="Save" >
+    </form>
+    <a href="{% url 'profile' %}">profile</a><br><br>
+    <a href="{% url 'logout' %}">logout</a>
+
+</body>
+</html>
