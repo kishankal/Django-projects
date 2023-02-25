@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Page</title>
+</head>
+<body>
+    <h2> Welcome {{name}} to Dashboard</h2>
+
+    # if perms.application_name.operation_permission_logic.model_name_in_lowercase
+    {% if perms.enroll.delete_blog %}
+    <br><br>
+        <input type="button" value="Delete"> <br><br>
+    {% else %}
+        <h3>No delete permission given to {{name}}</h3>
+    {% endif %}
+    
+   
+    
+    <a href="{% url 'logout' %}">logout</a>
+</body>
+</html>
