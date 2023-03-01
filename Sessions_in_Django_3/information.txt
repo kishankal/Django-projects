@@ -1,0 +1,5 @@
+this project is about:
+ 
+1. how to set Cookie for tersting purpose
+2. how to test the Cookie which we have created .
+3. how to delete testable created cookie from database and from brower

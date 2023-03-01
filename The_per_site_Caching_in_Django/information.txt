@@ -1,0 +1,15 @@
+Per site Caching implementation:
+
+steps for setup caching per site:
+1. go to inner project settings file
+2. go into middleware
+3. add 'django.middleware.cache.UpdateCacheMiddleware',  above CommonMiddleware 
+4. add 'django.middleware.cache.FetchFromCacheMiddleware',  below CommonMiddleware 
+5. add below code after STATIC_URL
+	CACHE_MIDDLEWARE_SECONDS = 20	
+	CACHE = {
+    		'default' : {
+        		'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        		'LOCATION' : 'enroll_cache',
+    			    }
+		}

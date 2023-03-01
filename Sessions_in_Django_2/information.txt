@@ -1,0 +1,5 @@
+this project will give information about :
+
+1. how to watch expiry date, age, ....
+2. how to set expiry time for any session 
+3. how to delte all session and clear the database if session is expired

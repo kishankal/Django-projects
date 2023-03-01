@@ -1,0 +1,5 @@
+this project will give information about :
+
+1. how to create session
+2. how to get created session
+3. how to delete session
